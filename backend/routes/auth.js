@@ -36,4 +36,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/api/user-role', auth, (req, res) => {
+    res.status(200).json({ role: req.user.role });
+  });
+
 module.exports = router;

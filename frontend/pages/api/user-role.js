@@ -1,10 +1,13 @@
-import authenticate from '../../middleware/auth';
+// frontend/pages/api/user-role.js
+import axios from 'axios';
 
 export default async (req, res) => {
   try {
-    await authenticate(req, res, () => {});
-    res.status(200).json({ role: req.user.role });
+    const response = await axios.get('http://localhost:5000/api/user-role', {
+      headers: req.headers,
+    });
+    res.status(200).json(response.data);
   } catch (error) {
-    res.status(401).json({ error: 'Please authenticate.' });
+    res.status(error.response?.status || 500).json({ error: error.response?.data?.error || 'Failed to fetch user role' });
   }
 };
