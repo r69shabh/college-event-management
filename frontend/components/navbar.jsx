@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <Link href="/" className="text-2xl font-6  flex items-center">
-          <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2" />
+          <img src="/favicon.ico" alt="Logo" className="h-8 w-8 mr-2" />
           College Events
         </Link>
 
@@ -26,7 +26,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search events, dashboard..."
-            className="w-full max-w-lg px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full max-w-lg px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white"
           />
         </div>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-white"
           />
           <Link href="/" className="block py-2 px-4 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300">
             Home
@@ -87,7 +87,6 @@ const Navbar = () => {
           <Link href="/signup" className="block py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-900 transition duration-300">
             Sign Up
           </Link>
-          <DarkModeToggle /> {/* Ensure this works as well */}
         </div>
       )}
     </nav>

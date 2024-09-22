@@ -28,7 +28,7 @@ const DarkModeToggle = () => {
       aria-label="Toggle dark mode"
       className="p-2 rounded-full bg-gray-200 dark:bg-gray-800"
     >
-      {isDarkMode ? "🌙" : "☀️"}
+      {isDarkMode ? "☀️" : "🌙"}
     </button>
   );
 };
