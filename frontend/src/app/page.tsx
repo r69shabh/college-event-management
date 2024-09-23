@@ -4,8 +4,8 @@ import EventCard from '../../components/EventCard';
 
 const HomePage = () => {
   const featuredEvents = [
-    { id: '1', title: 'Tech Fest 2024', date: '2024-04-15', category: 'Technology' },
-    { id: '2', title: 'Cultural Night', date: '2024-05-01', category: 'Cultural' },
+    { id: '1', title: 'Tech Fest 2024', date: '2024-04-15', category: 'Technology', imageUrl: '/images/tech-fest.jpg' },
+    { id: '2', title: 'Cultural Night', date: '2024-05-01', category: 'Cultural', imageUrl: '/images/cultural-night.jpg' },
   ];
 
   return (

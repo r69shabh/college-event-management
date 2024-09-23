@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="bg-white dark:bg-gray-900 text-black dark:text-white p-4 sticky top-0 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
-        <Link href="/" className="text-2xl font-6  flex items-center">
+        <Link href="/" className="text-2xl font-6 flex items-center">
           <img src="/favicon.ico" alt="Logo" className="h-8 w-8 mr-2" />
           College Events
         </Link>
@@ -81,12 +81,13 @@ const Navbar = () => {
           <Link href="/profile" className="block py-2 px-4 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300">
             Profile
           </Link>
-          <Link href="/login" className="block py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">
+          <Link href="/login" className="block py-2 px-4 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300">
             Log In
           </Link>
-          <Link href="/signup" className="block py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-900 transition duration-300">
+          <Link href="/signup" className="block py-2 px-4 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300">
             Sign Up
           </Link>
+          <DarkModeToggle /> {/* Ensure this component is correctly imported */}
         </div>
       )}
     </nav>

@@ -8,6 +8,7 @@ interface Event {
   name: string;
   date: string;
   category: string;
+  imageUrl: string;
   // Add other event properties here
 }
 
@@ -15,9 +16,19 @@ interface HomePageProps {
   events: Event[];
 }
 
+// Define the imageUrls object
+const imageUrls: { [key: string]: string } = {
+  Technology: '/images/tech-fest.jpg',
+  Cultural: '/images/cultural-night.jpg',
+  Science: '/images/science-expo.jpg',
+  Art: '/images/art-exhibition.jpg',
+  // Add more categories and their image URLs as needed
+};
+
 const HomePage: FC<HomePageProps> = ({ events }) => {
   return (
     <div>
+      <Navbar />
       <div className="container mx-auto mt-8">
         <h1 className="text-3xl font-bold mb-6">Upcoming Events</h1>
         {events && events.length > 0 ? (
@@ -28,7 +39,8 @@ const HomePage: FC<HomePageProps> = ({ events }) => {
                 id={event.id} 
                 title={event.name} 
                 date={event.date} 
-                category={event.category} 
+                category={event.category}
+                imageUrl={imageUrls[event.category]} // Use imageUrls object to get image URL
               />
             ))}
           </div>
