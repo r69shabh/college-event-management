@@ -1,14 +1,6 @@
 import React from 'react';
 
-interface EventCardProps {
-  id: string;
-  title: string;
-  date: string;
-  category: string;
-  imageUrl: string;
-}
-
-const EventCard: React.FC<EventCardProps> = ({ id, title, date, category, imageUrl }) => {
+const EventCard = ({ id, title, date, category, imageUrl }) => {
   return (
     <div className="bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 transform transition-transform hover:scale-105 relative overflow-hidden h-96">
       <img src={imageUrl} alt={title} className="w-full h-64 object-cover rounded-t-lg" />

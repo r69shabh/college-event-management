@@ -1,23 +1,10 @@
+"use client";
+import React from 'react';
 import Navbar from '../../components/Navbar';
 import EventCard from '../../components/EventCard';
 import { getEvents } from '../../utils/api';
-import { FC } from 'react';
 
-interface Event {
-  id: string;
-  name: string;
-  date: string;
-  category: string;
-  imageUrl: string;
-  // Add other event properties here
-}
-
-interface HomePageProps {
-  events: Event[];
-}
-
-// Define the imageUrls object
-const imageUrls: { [key: string]: string } = {
+const imageUrls = {
   Technology: '/images/tech-fest.jpg',
   Cultural: '/images/cultural-night.jpg',
   Science: '/images/science-expo.jpg',
@@ -25,7 +12,7 @@ const imageUrls: { [key: string]: string } = {
   // Add more categories and their image URLs as needed
 };
 
-const HomePage: FC<HomePageProps> = ({ events }) => {
+const HomePage = ({ events }) => {
   return (
     <div>
       <Navbar />
@@ -45,21 +32,11 @@ const HomePage: FC<HomePageProps> = ({ events }) => {
             ))}
           </div>
         ) : (
-          <p className="text-gray-500">No upcoming events available at the moment.</p>
+          <p>No events found.</p>
         )}
       </div>
     </div>
   );
 };
-
-export async function getStaticProps() {
-  try {
-    const events = await getEvents();
-    return { props: { events } };
-  } catch (error) {
-    console.error('Error fetching events:', error);
-    return { props: { events: [] } }; // Return empty events if API fails
-  }
-}
 
 export default HomePage;

@@ -1,14 +1,10 @@
+"use client";
 
 import React from 'react';
 import Navbar from '../../components/Navbar.jsx';
 import '../../styles/globals.css';
-import { ReactNode } from 'react';
 
-interface RootLayoutProps {
-  children: ReactNode;
-}
-
-const RootLayout = ({ children }: RootLayoutProps) => {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>

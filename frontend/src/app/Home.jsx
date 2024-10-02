@@ -1,16 +1,8 @@
-// frontend/src/app/Home.tsx
+// frontend/src/app/Home.jsx
 import React from 'react';
 import EventCard from '../../components/EventCard';
 
-interface Event {
-  id: string;
-  title: string;
-  date: string;
-  category: string;
-  imageUrl: string; // Add imageUrl to the Event interface
-}
-
-const events: Event[] = [
+const events = [
   {
     id: '1',
     title: 'Event 1',
